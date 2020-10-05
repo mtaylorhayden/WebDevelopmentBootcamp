@@ -1,0 +1,13 @@
+// constructor function with annoyomous function
+function BellBoy(name, age, yearsOfExperience, areasOfExpertise){
+    this.name = name;
+    this.age = age;
+    this.yearsOfExperience = yearsOfExperience;
+    this.areasOfExpertise = areasOfExpertise;
+    this.cleanRoom = function(){
+        alert("Knock Knock");
+    }
+}
+
+var bellBoy1 = new BellBoy("Max", 32, 3, ["bathrooms", "bedrooms", "couches"])
+console.log(bellBoy1.cleanRoom());

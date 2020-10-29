@@ -48,8 +48,7 @@ $(".btn").click(function (e) {
         setTimeout(nextSequence, 1000);
         level++;
         
-        // this if check is fuxed now
-    } else if (answer === false){ //&& userClickedPattern.length === gamePattern.length) {
+    } else if (answer === false){
         $("h1").html("Game Over, Press any key to restart");
         var audio = new Audio("sounds/wrong.mp3");
         audio.play();
@@ -59,7 +58,7 @@ $(".btn").click(function (e) {
             $("body").removeClass("game-over");
         }, 200);
         userClickedPattern.length = 0;
-        
+
         started = true;
     }
 });

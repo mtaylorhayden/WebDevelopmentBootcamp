@@ -21,6 +21,23 @@ app.post("/", function(req, res){
     res.send("The result is of the calculation is : " + result);
 });
 
+var weight;
+var height;
+
+app.get("/bmiCalculator", function(req, res){
+    res.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+app.post("/bmiCalculator", function(req, res){
+
+    weight = Number(req.body.height);
+    height = Number(req.body.weight);
+
+    var result = Math.pow(weight / height, 2);
+
+    res.send("The result is of the calculation is : " + result);
+});
+
 app.listen(3000, function(){
     console.log("Server running at port 3000");
 });

@@ -8,21 +8,8 @@
 
     <h1><%= post.title %></h1>
 
-    <p id="bodyContent"><%= post.content.substring(0,100) %> <a href="/posts/<%=post.title%>">... Read More</a></p> 
+    <p id="bodyContent"><%= post.body.substring(0,100) %> <a href="/posts/<%=post.title%>">... Read More</a></p> 
 
 <% }) %>
 
 <%- include('partials/footer') -%>
-
-<!-- <script>
-
-    const posts = ejs.render('<%= postsContent %>');
-    console.log(posts);
-
-    posts.forEach(function (post) {
-        const length = 100;
-        
-        const bodyTruncated = body.substring(0, length);
-        document.getElementById("bodyContent").innerHTML(bodyTruncated);
-    });
-</script> -->

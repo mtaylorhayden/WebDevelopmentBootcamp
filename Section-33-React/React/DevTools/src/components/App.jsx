@@ -1,13 +1,26 @@
 import React from "react";
 import Card from "./Card";
+import contacts from "../contacts";
 
 
+function createCard(contact){
+  return <Card
+  key={contact.id}
+  id={contact.id}
+  name={contact.name}
+  img={contact.imgURL}
+  phone={contact.phone}
+  email={contact.email}
+  />
+}
 
 export function App() {
 return (
 <div>
   <h1 className="heading">My Contacts</h1>
-    <Card name="Beyonce"
+  {contacts.map(createCard)}
+
+    {/* <Card name="Beyonce"
       img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
       email="b@beyonce.com" tele="+123 456 789" />
 
@@ -17,7 +30,7 @@ return (
 
     <Card name="Chuck Norris"
       img="https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png"
-      email="gmail@chucknorris.com" tele="+918 372 547" />
+      email="gmail@chucknorris.com" tele="+918 372 547" /> */}
 </div>
 );
 }

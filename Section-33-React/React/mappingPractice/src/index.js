@@ -10,6 +10,6 @@ const result = Emojipedia.map(function(x){
     results.push(x.meaning.substring(0,100));
 })
 
-console.log(results);
+console.log(result);
 
 ReactDOM.render(<App />, document.getElementById("root"));

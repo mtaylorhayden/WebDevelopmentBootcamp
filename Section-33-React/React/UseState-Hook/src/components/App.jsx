@@ -3,22 +3,21 @@ import React, {useState} from "react";
 function App() {
 
 
-  const [count, setCount] = useState(0)
+  const [startingNumber, changeStartingNumber] = useState(1738);
 
-  console.log(count);
+  console.log(startingNumber);
 
-  function increase() {
-    setCount(count + 1);
+  function increase(){
+    changeStartingNumber(startingNumber + 1);
   };
 
-  function decrease() {
-    setCount(count - 1);
+  function decrease(){
+    changeStartingNumber(startingNumber - 1);
   };
-
-
+ 
 return(
   <div className="container">
-    <h1>{count}</h1>
+    <h1>{startingNumber}</h1>
     <button onClick={increase}>+</button>
     <button onClick={decrease}>-</button>
 

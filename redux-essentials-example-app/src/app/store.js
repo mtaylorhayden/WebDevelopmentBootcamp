@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import postsReducer from '../features/posts/postsSlice'
+import usersReducer from '../features/users/usersSlice'
 
 // update the call to configureStore so that the postsReducer
 // is being passed as a reducer field named posts
 
 export default configureStore({
   reducer: {
-    posts: postsReducer
+    posts: postsReducer,
+    users: usersReducer
   }
 })
 

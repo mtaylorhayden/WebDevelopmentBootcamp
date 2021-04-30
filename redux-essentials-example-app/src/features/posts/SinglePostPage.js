@@ -2,6 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { PostAuthor } from '../posts/PostAuthor'
+import { TimeAgo } from '../posts/TimeAgo'
+import { ReactionButtons } from '../posts/ReactionButtons'
 
 
 export const SinglePostPage = ({ match }) => {
@@ -25,9 +27,12 @@ export const SinglePostPage = ({ match }) => {
         <h2>{post.title}</h2>
         <p className="post-content">{post.content}</p>
         <Link to={`/editPost/${post.id}`} className="button">
-            Edit Post
+          Edit Post
         </Link>
         <PostAuthor userId={post.user} />
+        <TimeAgo timestamp={post.date}/>
+        <ReactionButtons post={post} />
+
       </article>
     </section>
   )
